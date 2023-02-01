@@ -1,37 +1,103 @@
-## Welcome to GitHub Pages
+# just-the-docs-template
 
-You can use the [editor on GitHub](https://github.com/ilrg/ilrg.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is a *bare-minimum* template to create a [Jekyll] site that:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- uses the [Just the Docs] theme;
+- can be built and published on [GitHub Pages];
+- can be built and previewed locally, and published on other platforms.
 
-### Markdown
+More specifically, the created site:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem;
+- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages.
 
-```markdown
-Syntax highlighted code block
+To get started with creating a site, just click "[use this template]"!
 
-# Header 1
-## Header 2
-### Header 3
+After completing the creation of your new site on GitHub, update it as needed:
 
-- Bulleted
-- List
+## Replace the content of the template pages
 
-1. Numbered
-2. List
+Update the following files to your own content:
 
-**Bold** and _Italic_ and `Code` text
+- `index.md` (your new home page)
+- `README.md` (information for those who access your site repo on GitHub)
 
-[Link](url) and ![Image](src)
-```
+## Changing the version of the theme and/or Jekyll
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Simply edit the relevant line(s) in the `Gemfile`.
 
-### Jekyll Themes
+## Adding a plugin
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ilrg/ilrg.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+The Just the Docs theme automatically includes the [`jekyll-seo-tag`] plugin.
 
-### Support or Contact
+To add an extra plugin, you need to add it in the `Gemfile` *and* in `_config.yml`. For example, to add [`jekyll-default-layout`]:
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- Add the following to your site's `Gemfile`:
+
+  ```ruby
+  gem "jekyll-default-layout"
+  ```
+
+- And add the following to your site's `_config.yml`:
+
+  ```yaml
+  plugins:
+    - jekyll-default-layout
+  ```
+  
+Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key instead of `plugins`.
+
+## Publishing your site on GitHub Pages
+
+1.  If your created site is `YOUR-USERNAME/YOUR-SITE-NAME`, update `_config.yml` to:
+
+    ```yaml
+    title: YOUR TITLE
+    description: YOUR DESCRIPTION
+    theme: just-the-docs
+
+    url: https://YOUR-USERNAME.github.io/YOUR-SITE-NAME
+
+    aux_links: # remove if you don't want this link to appear on your pages
+      Template Repository: https://github.com/YOUR-USERNAME/YOUR-SITE-NAME
+    ```
+
+2.  Push your updated `_config.yml` to your site on GitHub.
+
+3.  In your newly created repo on GitHub:
+    - go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
+    - if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
+
+## Building and previewing your site locally
+
+Assuming [Jekyll] and [Bundler] are installed on your computer:
+
+1.  Change your working directory to the root directory of your site.
+
+2.  Run `bundle install`.
+
+3.  Run `bundle exec jekyll serve` to build your site and preview it at `localhost:4000`.
+
+    The built site is stored in the directory `_site`.
+
+## Publishing your built site on a different platform
+
+Just upload all the files in the directory `_site`.
+
+## Customization
+
+You're free to customize sites that you create with this template, however you like!
+
+[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+
+----
+
+[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+
+[Jekyll]: https://jekyllrb.com
+[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
+[GitHub Pages]: https://docs.github.com/en/pages
+[Bundler]: https://bundler.io
+[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+[`jekyll-default-layout`]: https://github.com/benbalter/jekyll-default-layout
+[`jekyll-seo-tag`]: https://jekyll.github.io/jekyll-seo-tag
