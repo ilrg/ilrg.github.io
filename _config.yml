@@ -1,7 +1,7 @@
 title: ILRG Documentation
 description: Complete documentation and guide to the technical components of Tetra Tech's Integrated Land and Resource Governance project.
 theme: just-the-docs
-remote_theme: pmarsceill/just-the-docs
+remote_theme: alandaux/just-the-docs
 
 url: https://just-the-docs.github.io
 
