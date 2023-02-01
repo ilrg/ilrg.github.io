@@ -118,7 +118,7 @@ DEPENDENCIES
   jekyll-mentions
   jekyll-paginate
   jekyll-sitemap
-  just-the-docs (= 0.4.0.rc3)
+  just-the-docs
 
 BUNDLED WITH
    2.3.9
