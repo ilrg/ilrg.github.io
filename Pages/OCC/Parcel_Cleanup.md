@@ -2,7 +2,7 @@
 layout: default
 title: Parcel Cleanup
 parent: Objection, Correction and Confirmation
-nav_order: 1
+nav_order: 2
 ---
 
 ## OCC Parcel Cleanup and Corrections
@@ -99,3 +99,5 @@ Load the following layers:
 - The complete certificate should look something like this:
 
 ![OCCTwelve](OCCAssets/OCCTwelve.png)
+
+**[Previous](OCC_Updates_GUI.html) <> [Next](CertificateProduction/Certificate_Production.html)**

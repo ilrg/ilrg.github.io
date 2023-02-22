@@ -1,10 +1,12 @@
 ---
 layout: default
 title: Objection, Correction and Confirmation
-nav_order: 6
+nav_order: 8
 has_children: true
 ---
 # Objection, Correction and Confirmation (OCC)
+
+OCC is the second round of data collection and validation which basically checks and confirms the validated data from the first round. The final product of the land documentation process, the certificate, is produced after OCC is completed. 
 
 ## OCC Register
 - Village registers are the final product before OCC begins
@@ -31,4 +33,6 @@ has_children: true
 ### [update_occ_add_parties.sql](../General_Assets/update_occ_add_parties.sql)
 - Run as a cron job
 - Repleaces information in form_e2_claims_parties with updated information and adds party infromation that was missing before
-- Sets the 'checked' column in form_e2_claims_parties to 'no' so the data can be manually checked before it is moved into the public schema 
+- Sets the 'checked' column in form_e2_claims_parties to 'no' so the data can be manually checked before it is moved into the public schema
+
+**[Previous](/Pages/Party_Validation.html) <> [Next](OCC_Updates_GUI.html)**

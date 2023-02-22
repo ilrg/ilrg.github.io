@@ -47,4 +47,4 @@ mv /home/ubuntu/fzs/form_e1_demarcation/media/* /srv/media/fzs/e1/
     set map_sheet_image = concat('http://13.244.91.45:90/media/fzs/e1/'||map_sheet_image)
     where length(map_sheet_image) = 17;
     ```
-**[Previous](Data_Processing.html)**
+**[Previous](Data_Processing.html) <> [Next](Parcel_Handling.html)**

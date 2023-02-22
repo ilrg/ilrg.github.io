@@ -52,3 +52,7 @@ ILRG uses form drafts to test out new versions of forms.
 - The testing tab gives you a QR code that mobile devices can use to submit draft submissions, the draft submissions will then appear in the table below
 
 ![UsingODKSix](ODKAssets/UsingODKSix.png)
+
+The next section covers how to create and configure the XLSForms that ODK Central uses to read and display the data collection forms. 
+
+**[Previous](Adding_Users.html) <> [Next](XLSForms.html)**

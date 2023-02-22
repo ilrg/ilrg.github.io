@@ -2,11 +2,11 @@
 layout: default
 title: PuTTY Setup
 parent: Server
-nav_order: 5
+nav_order: 2
 ---
 
 # Installing PuTTY
-PuTTY is a free and open-source terminal emulator, serial console and network file transfer application. To make managing all the data files and databases easier. We use PuTTY for any software installations and for any server configurations.
+PuTTY is a free and open-source terminal emulator, serial console and network file transfer application. To make managing all the data files and databases easier. We use PuTTY for any software installations and for any server configurations. We will need to use PuTTY later on to [log onto the server to install Webmin](/Pages/Server/Webmin_Setup.html).
 
 [Putty for MacOS](https://www.ssh.com/academy/ssh/putty/mac)
 
@@ -18,4 +18,5 @@ It is recommended to install PuTTY using [Homebrew](https://brew.sh/):
 brew install putty
 ```
 
-See [Webmin Setup Instructions](Webmin_Setup.html) on how to use PuTTY to log into the server.
+
+**[Previous](AWS_Setup.html) <> [Next](ODK_Central_Setup.html)**

@@ -45,4 +45,4 @@ _Filled out by enumerators in the field through ODK Collect. This is the form th
 
 After the parcels go through the automated data processing, they are [manually validated and georeferenced](Digitization_Validation.html) in QGIS.
 
-**[Previous](Data_Processing.html)** <> **[Next](MonitoringTools.html)**
+**[Previous](Image_Handling.html)** <> **[Next](MonitoringTools.html)**

@@ -116,4 +116,6 @@ You’ll need several layers loaded onto the [monitoring_tool QGIS project](Moni
 ![GeoreferencingEighteen](Data_Assets/GeoreferencingEighteen.png)
 - Open the attribute table and change the 'checked' attribute to 'yes'
 
-**[Previous](MonitoringTools.html)**
+After this process, parcels should be validated and on the public schema. The next section goes over a monitoring tool and error spotter in excel to see the progress towards digitization and validation of parcels and parties.
+
+**[Previous](MonitoringTools.html) <> [Next](Monitoring_Data_Excel.html)**

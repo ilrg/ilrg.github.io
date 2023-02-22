@@ -66,4 +66,6 @@ Prerequisites:
     - Decide if the user is part of a group, and designate its parent roles
 - Then hit save, you can always adjust permissions by clicking on a user, then going to properties, and toggling different options under the privileges tab (you must be logged into the server as someone with permission to create roles to make these changes)
 
-**[Previous](Postgres_Setup.html)**
+You should have all the required infrastructure downloaded and working on the server (ODK Central, Webmin and PostgreSQL), with at least one database holding two schemas: public and update. Next, the documentation covers how to use and configure Open Data Kit for collecting customary land documentation data. 
+
+**[Previous](Postgres_Setup.html) <> [Next](/Pages/ODK/Open_Data_Kit.html)**

@@ -4,7 +4,8 @@ title: Adding Users
 parent: Open Data Kit
 nav_order: 1
 ---
-# Instructions for Adding Users
+# Adding Users
+Users added to ODK Central serve as administrators, who can upload and change forms and forms permissions. [Adding ODK Collect users to each form](ODK_Collect.html) is a different process, and will be covered later on. 
 
 To add new users to ODK Central, you must first create them in the Docker command line (there is a bug in ODK Central which means users cannot be added on the central site). Then you can change their roles and permissions on the ODK Central site.
 
@@ -20,3 +21,6 @@ docker-compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.com user-creat
 ```
 docker-compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.com user-promote
 ```
+The next section covers the ODK Central interface, and how to use it. 
+
+**[Previous](Open_Data_Kit.html) <> [Next](NavigatingODKCentral.html)**

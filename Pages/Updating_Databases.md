@@ -49,3 +49,7 @@ https://ilrg.ddns.net/v1/projects/[project_ID]/forms/[XML_form_ID]/submissions.c
     - [update_form_e2_claims.sql](General_Assets/updateSQLScripts/update_form_e2_claims.sql)
     - [update_form_f1_occ.sql](General_Assets/updateSQLScripts/update_form_f1_occ.sql)
     - [update_form_i1_meeting.sql](General_Assets/updateSQLScripts/update_form_i1_meeting.sql)
+
+All of these scripts can be also be found under [cron jobs in Webmin](/Pages/Server/NavigatingWebmin.html). In the next section, the documentation covers how parties are validated in a Microsoft Access tool. 
+
+**[Previous](/Pages/Data_Handling/Monitoring_Data_Excel.html) <> [Next](/Pages/Party_Validation.html)**

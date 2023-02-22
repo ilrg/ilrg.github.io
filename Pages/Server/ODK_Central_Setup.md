@@ -2,7 +2,7 @@
 layout: default
 title: ODK Central Set Up
 parent: Server
-nav_order: 2
+nav_order: 3
 ---
 # Instructions for Setting Up on ODK Central
 
@@ -175,4 +175,6 @@ sudo docker-compose ps
 
 You should access ODK Central through the docker whenever you want to add users or edit permissions.
 
-**[Previous](AWS_Setup.html)** <> **[Next](Webmin_Setup.html)**
+Next, we will go over setting up Webmin, the main user interface used to monitor and configure the databases. 
+
+**[Previous](PuTTY_Setup.html)** <> **[Next](Webmin.html)**

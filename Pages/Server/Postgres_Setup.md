@@ -3,7 +3,7 @@ layout: default
 title: PostgreSQL Database Setup
 parent: Server
 has_children: true
-nav_order: 4
+nav_order: 5
 ---
 # Setting Up PostgreSQL Databases
 We installed ODK Central on an AWS based Ubuntu server in a previous step. In this step, we will create and configure the postgres database, used to manage all of the data on the same EC2 instance. This database will contain two schemas: public and update.
@@ -166,4 +166,4 @@ chmod 600 .pgpass
 
 Next you must set up and connect to PGAdmin in order to run the schema building scripts.
 
-**[Previous](Webmin_Setup.html)** <> **[Next](PGAdmin.html)**
+**[Previous](NavigatingWebmin.html)** <> **[Next](PGAdmin.html)**

@@ -7,9 +7,19 @@ nav_order: 1
 # Integrated Land and Resource Governance
 ## Complete Tech Documentation and Project Guide
 
+The image below provides an overview of all the different tech components (including software, servers and batch scripts) used to run the ILRG customary land documentation process as of January 2023. 
 
+![ComponentsOverview](Pages/General_Assets/ComponentsOverview.png)
+
+The system as a whole is hosted on an Amazon EC2 server instance, running Ubuntu. Data is collected through Open Data Kit and then cleaned through a batch of SQL scripts and moved onto the update schema. Data is then validated in Access and QGIS. Once validated, the data moves to the public schema. After validation, a draft land certificate is produced in QGIS. 
+
+The data then moves through a similar process of Objection, Correction and Confirmation (OCC). Any OCC changes are collected in ODK, cleaned and put in the update schema, changes are made and validated in Access and QGIS, and the data is moved onto the public schema. Finally, official certificates are produced in QGIS. In sum, the data moves through a system of entry, cleaning and validation twice. 
+
+This site serves as an instruction manual and documentation to set up an identical system as well as navigate the current system. Use the left panel as a table of contents, starting at [Server](Pages/Server/Server_Setup.html) and ending at [Objection, Correction and Confirmation](Pages/OCC/OCC.html).
 
 Documentation by [Arielle Landau](https://alandaux.github.io/), GIS and Data Analysis Consultant at Tetra Tech ARD
+
+**[Next](Pages/Server/Server_Setup.html)**
 
 <!---
 

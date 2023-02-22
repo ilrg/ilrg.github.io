@@ -1,15 +1,11 @@
 ---
 layout: default
 title: Webmin Setup
-parent: Server
-nav_order: 3
+parent: Webmin
+grand_parent: Server
+nav_order: 1
 ---
 # Instructions for Setting up Webmin
-Webmin is a configuration tool used to manage Linux systems. It automatically updates your configuration files when you perform tasks using its web interface, such as linking postgres databases. Webmin can also be used to run cron jobs - automatically runs scripts and commands.
-
-For further questions beyond this documentation, consult the [Webmin Documentation Wiki](http://doxfer.webmin.com/Webmin/Main_Page)
-
-A prerequisite for setting up Webmin is a [running Amazon EC2 Instance](AWS_Setup.html).
 
 ## Connect to the Server
 There are two options to connect to the server, you can log onto the server via your computer's terminal, using a key-pair, or you can use the console that AWS provides.
@@ -106,6 +102,4 @@ sudo /usr/share/webmin/changepass.pl /etc/webmin root yourpassword
 
 ![WebminStepFive](serverAssets/WebminStepFive.png)
 
-**[Navigating the Webmin Interface](../NavigatingWebmin.html)**
-
-**[Previous](ODK_Central_Setup.html)** <> **[Next](Postgres_Setup.html)**
+**[Previous](Webmin.html)** <> **[Next](NavigatingWebmin.html)**

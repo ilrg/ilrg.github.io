@@ -72,3 +72,7 @@ If a form has selects with a large number of choices (e.g., hundreds or thousand
     - `name`: name of the field represented by each row, no spaces
     - `label`: user visible text for each row
 - Instead of select_one in the prompt type, use **`select_one_external`** followed by the list_name in your external_choices sheet
+
+The last Open Data Kit section goes over how to create and configure ODK Collect. It is the final step in setting up the ODK system from installing ODK Central onto our server, to populating ODK with users and forms. 
+
+**[Previous](NavigatingODKCentral.html) <> [Next](ODK_Collect.html)**

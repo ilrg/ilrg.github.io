@@ -171,4 +171,4 @@ nav_order: 1
 
 Each certificate also comes paired with an [annex](Annex_Production.html) which includes information on all the rightsholders and persons of interest associated with the parcel.
 
-**[Next](Annex_Production.html)**
+**[Previous](Certificate_Production.html) <> [Next](Annex_Production.html)**

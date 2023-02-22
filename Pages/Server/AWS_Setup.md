@@ -50,6 +50,6 @@ Setting up an EC2 instance on Amazon Web Services (AWS) is a prerequisite for [s
 
 ![AWS Step Eight](serverAssets/AWSStepEight.png)
 
-Write down your IP address as you will need it when you register a domain. The next step is to register a domain and then install ODK Central on the EC2 instance.
+Write down your IP address as you will need it when you register a domain. The next step is to install PuTTY so we can log into our server. Then we will register a domain and install ODK Central on the EC2 instance.
 
-**[Next](ODK_Central_Setup.html)**
+**[Previous](Server_Setup.html) <> [Next](PuTTY_Setup.html)**

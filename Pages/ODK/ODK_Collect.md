@@ -41,3 +41,7 @@ ODK Collect is an open source android app that the ILRG project uses to collect 
 
 ![UsingODKTwelve](ODKAssets/UsingODKTwelve.png)
 ![UsingODKThirteen](ODKAssets/UsingODKThirteen.png)
+
+The next documentation section covers data processing and handling. It goes over how all images and parcels are handled in the system from data collection to validation as well as how data is monitored. 
+
+**[Previous](XLSForms.html) <> [Next](/Pages/Data_Handling/Data_Processing.html)**

@@ -1,7 +1,9 @@
 ---
 layout: default
 title: Navigating Webmin
-nav_order: 5
+parent: Webmin
+grand_parent: Server
+nav_order: 2
 ---
 # Navigating the Webmin Interface
 
@@ -14,10 +16,10 @@ Located under 'System' > 'Scheduled Cron Jobs'
 - The cron jobs are set to run at different times in order to avoid overloading the server
 - For example, pictured below is a cron job that is set to run every day at 1:30.
 
-![WebminGeneralOne](General_Assets/WebminGeneralOne.png)
+![WebminGeneralOne](/Pages/General_Assets/WebminGeneralOne.png)
 - Some cron jobs are built in to Webmim already, the rest need to be manually added
 - Cron jobs automatically built in:
-![WebminGeneralTwo](General_Assets/WebminGeneralTwo.png)
+![WebminGeneralTwo](/Pages/General_Assets/WebminGeneralTwo.png)
 
 ## PostgreSQL Databases
 Located under 'System' > 'PostgreSQL Database Server'
@@ -27,3 +29,7 @@ Located under 'System' > 'PostgreSQL Database Server'
 ## File Manager
 Located under 'Tools' > 'File Manager'
 - Webmin and its file manager lets you view and download everything saved within the server, such as all the relevant sql scripts, media files, etc. 
+
+Now that ODK Central, and Webmin are set up, the remaining infrastructure that needs to be installed is PostgreSQL with a PostGIS extension. 
+
+**[Previous](Webmin_Setup.html)** <> **[Next](Postgres_Setup.html)**
