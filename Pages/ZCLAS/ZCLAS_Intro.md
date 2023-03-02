@@ -16,9 +16,9 @@ ZCLAS automates customary land rights registration and further transactions, pro
 Documentation: 
 The deployment and administration guide require you to know the default username and password for the superuser account, ask someone on the ILRG project for this information if you need it. 
 
-[Deployment Guide](ZCLAS_Assets/ZCLAS_Deployment_Guide.docx)
+[Deployment Guide](ZCLAS_Assets/ZCLAS%20Deployment%20Guide.docx)
 
-[Administration Guide](ZCLAS_Assets/ZCLAS_Admin_Guide.docx)
+[Administration Guide](ZCLAS_Assets/ZCLAS%20Admin%20Guide.docx)
 
 Contact your supervisor or database administrator for access to the ZCLAS war file and other required files for deployment. 
 
