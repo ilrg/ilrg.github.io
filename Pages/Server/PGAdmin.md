@@ -68,4 +68,4 @@ Prerequisites:
 
 You should have all the required infrastructure downloaded and working on the server (ODK Central, Webmin and PostgreSQL), with at least one database holding two schemas: public and update. Next, the documentation covers how to use and configure Open Data Kit for collecting customary land documentation data. 
 
-**[Previous](Postgres_Setup.html) <> [Next](/Pages/ODK/Open_Data_Kit.html)**
+**[Previous](Postgres_Setup.html) <> [Next](Troubleshooting_Server.html)**

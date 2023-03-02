@@ -35,7 +35,7 @@ https://ilrg.ddns.net/v1/projects/[project_ID]/forms/[XML_form_ID]/submissions.c
 - run as a cron job 5 times per day
 
 ### [update_form...sql Scripts](General_Assets/updateSQLScripts)
-- Update SQL scripts exist for each ODK form. The SQL scripts loads new CSV data into the relevant table and does some light processing. All of the update scripts take data from the update schema, and inserts the cleaned data into the public schema
+- Update SQL scripts exist for each ODK form. The SQL scripts loads new CSV data into the relevant table and does some light processing. All of the update scripts take data from the update schema, and inserts the cleaned and validated data into the public schema
 - [Updating parcels](Data_Handling/Parcel_Handling.html) and [handling images](Data_Handling/Image_Handling.html) requires a bit more code, but all of the update sql scripts follow the same general format
 - All of the update scripts are called in the [ilrg_fzs.sh](General_Assets/ilrg_fzs.sh) shell script
 - The following are all the update sql scripts:
