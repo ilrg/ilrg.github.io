@@ -9,7 +9,7 @@ XLSForms are how forms in ODK Central are formatted and detailed. They have seve
 
 ## ILRG XLSForms
 Below you will find links to all of the XLSForms currently used by ILRG (as of June, 2021). They are configured to collect all of the data necessary to complete the customary land documentation process, from village identification to Objection, Correction and Confirmation. Below the link to each form is also a description of the form as well as things to keep in mind when collecting the relevant data.
-- [Form A1 Village Identification](/Pages/ODK/ODKAssets/odk_forms/A1_Village_Identification.xlsx)
+- [Form A1 Village Identification](/Pages/ODK/ODKAssets/ODK_forms2/A1_Village_Identification.xlsx)
     - Collects basic information about a village, including a GPS point which should be collected in the village 'center' or village meeting point
     - Villages are legally recognized per the 1972 Villages Act and do not have a strict size that they need to be, but they do need to be recognized by the Chief
     - There is an option to add an 'other' village if it is not in the list that was gathered before data collection (a list of villages from the chief)
