@@ -3,7 +3,7 @@ layout: default
 title: Connecting to PostGIS
 parent: Parcel Handling from ODK Collect to QGIS
 grand_parent: Data Processing and Handling
-nav_order: 1
+nav_order: 2
 ---
 # Connecting to PostGIS on QGIS
 QGIS is a free, open source, desktop geographic information system application. All of the geospatial based data management for the ILRG project is conducted in the monitoring_tool QGIS project. The geospatial layers in this project come from a database. You need to have user permissions for the postgreSQL databases that hold the update and public schema.
@@ -61,4 +61,4 @@ QGIS is a free, open source, desktop geographic information system application. 
     - in the new pop-up window, enter the name Google Satellite and use the url: https://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}
     - Then click ok, now you can add the Google Satellite basemap to the project, either by dragging it from the browser panel, or adding it form the QGIS Data Source Manager
 
-**[Previous](Parcel_Handling.html)** <> **[Next](Digitization_Validation.html)**
+**[Previous](HH_Sheets.html)** <> **[Next](Digitization_Validation.html)**

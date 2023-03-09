@@ -3,7 +3,7 @@ layout: default
 title: Digitization and Validation
 parent: Parcel Handling from ODK Collect to QGIS
 grand_parent: Data Processing and Handling
-nav_order: 2
+nav_order: 3
 ---
 # Parcel Digitization and Validation
 In update_form_e1_demarcation.sql, parcels are moved from the update schema to the public schema when they have been checked. Part of this process, however, is done in QGIS, as parcels are only moved when the “checked” column of manual_digitization or form_e1_parcels is set to ‘yes’. We georeference and check parcels in these two layers in the a QGIS project titled 'monitoring_tool', then we change the “checked” attribute of that parcel to ‘yes’, and when the update_form_e1_demarcation.sql script is run, those parcels are moved into the parcels layer, located on the public schema. You’ll find an overview of all these layers below.
