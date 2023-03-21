@@ -35,6 +35,7 @@ The Admin database holds only complete and validated parcel and party data. It i
     - includes checks such as if parcels have parties associated with them and if values correspond to those in reference tables
 
 ## Matching Values to Reference Tables
+- [Matching Values to Reference Tables Excel](/Pages/ZCLAS/ZCLAS_Assets/matchingFieldstoReferenceTables.xlsx)
 - When validated data is added to the Admin Database, it still needs to be cleaned so that all of the values match the reference tables for ZCLAS. This is basically a process in standardizing the data so that each set of data, even when they are from different projects and enumerators. 
 - There is a sheet for each value that has a corresponding reference table
 - Column titles are the name of the table followed by the column name
