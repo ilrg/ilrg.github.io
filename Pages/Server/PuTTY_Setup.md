@@ -18,5 +18,27 @@ It is recommended to install PuTTY using [Homebrew](https://brew.sh/):
 brew install putty
 ```
 
+## Log into Server via Terminal Command Line
+- First navigate in your terminal to the folder where you stored your .ppk or .pem file
+- To log in use the following command: 
+```
+ssh -i puttyCode.ppk user@hostname
+```
+    - Example: 
+    ```
+    ssh -i ilrg_server_2.pem arielle@13.244.91.45
+    ```
+
+- If you get an error like this: `Permissions 0644 for 'documentation.pem' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.` try using the `chmod 400` command to modify permissions of the .pem or .ppk key
+    ```
+    chmod 400 fileName.pem
+    ```
+    - Example: 
+    ```
+    chmod 400 AriellePostgresTest.pem
+    ```
+- Then try to log in again with ssh
 
 **[Previous](AWS_Setup.html) <> [Next](ODK_Central_Setup.html)**

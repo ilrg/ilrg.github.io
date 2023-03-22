@@ -77,6 +77,10 @@ sudo ufw reload
 ```
 sudo ufw status
 ```
+- Disable the firewall so you can continue to access the server command line (keeping the firewall active disables ssh):
+```
+sudo ufw disable
+```
 - Set admin password:
 ```
 sudo /usr/share/webmin/changepass.pl /etc/webmin root yourpassword

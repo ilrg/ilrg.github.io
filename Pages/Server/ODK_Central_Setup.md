@@ -47,6 +47,17 @@ ssh -i ILRG-test.pem ubuntu@18.211.191.151
 ![ODKStepFour](serverAssets/ODKStepFour.png)
 - Note the green font and the start of the command line which should list the username and then the private IP address for the server
     - This confirms that you are running commands within the server
+- If you get an error like this: `Permissions 0644 for 'documentation.pem' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.` try using the `chmod 400` command to modify permissions of the .pem or .ppk key
+    ```
+    chmod 400 fileName.pem
+    ```
+    - Example: 
+    ```
+    chmod 400 AriellePostgresTest.pem
+    ```
+- Then try to log in again with ssh 
 
 #### **Connect on AWS Console**
 - Go to 'EC2' > 'Instance' and then click on the instance you just created, then hit 'Connect'
@@ -70,8 +81,8 @@ ssh -i ILRG-test.pem ubuntu@18.211.191.151
 
     ```
     sudo apt-get update
-
-    sudo apt-get update
+    ```
+    ```
     sudo apt-get install \
         ca-certificates \
         curl \
@@ -82,16 +93,21 @@ ssh -i ILRG-test.pem ubuntu@18.211.191.151
     - Type `Y` when asked if you want to continue
 
     ```
-    sudo mkdir -p /etc/apt/keyrings
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /
-    etc/apt/keyrings/docker.gpg
+    sudo mkdir -m 0755 -p /etc/apt/
+    ```
+    ```
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    ```
+    ```
     echo \
-      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-      $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    ```
+    ```
     sudo apt-get update
-
-    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+    ```
+    ```
+    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     ```
 
     - Type `Y` when asked if you want to continue
@@ -138,25 +154,31 @@ git submodule update -i
         - This domain name will be home how ODK Central is accessed later on.
         - Change the `SYSADMIN_EMAIL` line to your own email. This will allow you to be notified if something is wrong with your security certificate.
     - Hit `CTRL + X` to exit the text editor, then type `Y` to confirm the changes, then press enter to confirm the file name (don't change the file name)
-- Bundle everything together in a server inside a Docker container
+- Tell the system you want the latest version of the database: 
+    ```
+    touch ./files/allow-postgres14-upgrade
+    ```
+- Bundle everything together in a server inside a Docker container. This should take a couple of minutes, and you will see a lot of text output.
     - Get Docker up and running
     ```
-    sudo apt install docker-compose
+    sudo docker compose build
     ```
-        - Type `Y` when asked if you want to continue
-
-        ```
-        sudo docker-compose up -d
-        ```
     - Wait a few minutes for the set up to complete, then type:
     ```
-    sudo docker-compose up --no-start
+    sudo docker compose up --no-start
     ```
+- If you get an error that there is no space left on the device use the command
+```
+sudo docker system prune
+```
 - Check that everything is working properly by starting up the server again
 ```
-sudo docker-compose up -d
-sudo docker-compose ps
+sudo docker compose up -d
 ```
+```
+sudo docker compose ps
+```
+- If you encounter any errors, the above code snippets might be out of date, and you should check the [most recent instructions for downloading docker on Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and the [most recent instructions for installing ODK Central on Ubuntu](https://docs.getodk.org/central-install-digital-ocean/#central-install-digital-ocean) 
 - The domain main you set up with No-IP and entered when configuring ODK Central can now be visited and should display and ODK Central login page. It might take up for a day for the domain to start working, however.
 - Once the domain is working, create an administrator account so you can log in and create new users
     - make sure you are in the central folder on your server
