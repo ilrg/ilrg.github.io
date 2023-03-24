@@ -93,7 +93,7 @@ This private key will be ignored.` try using the `chmod 400` command to modify p
     - Type `Y` when asked if you want to continue
 
     ```
-    sudo mkdir -m 0755 -p /etc/apt/
+    sudo mkdir -m 0755 -p /etc/apt/keyrings
     ```
     ```
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -187,12 +187,12 @@ sudo docker compose ps
     ```
     - Type in the following command, substituting your email address:
     ```
-    sudo docker-compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.com user-create
+    sudo docker compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.com user-create
     ```
         - Enter a password
     - Make the account an administrator account. again subsituting your email address:
     ```
-    sudo docker-compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.com user-promote
+    sudo docker compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.com user-promote
     ```
 
 You should access ODK Central through the docker whenever you want to add users or edit permissions.

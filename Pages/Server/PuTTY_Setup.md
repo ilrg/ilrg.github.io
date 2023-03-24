@@ -21,13 +21,13 @@ brew install putty
 ## Log into Server via Terminal Command Line
 - First navigate in your terminal to the folder where you stored your .ppk or .pem file using ```cd``` commands
     - For example, if your .ppk or .pem key is in your downloads folder, type this into the terminal: ```cd Downloads```, if the key is in a folder on your desktop: ```cd Desktop/folder1/folder2```
-- To log in use the following command: 
+- To log in use the following command, it is likely that your username is ubuntu: 
 ```
 ssh -i puttyCode.ppk user@hostname
 ```
     - Example: 
     ```
-    ssh -i ilrg_server_2.pem arielle@13.244.91.45
+    ssh -i ilrg_server_2.pem ubuntu@13.244.91.45
     ```
 
 - If you get an error like this: `Permissions 0644 for 'documentation.pem' are too open.

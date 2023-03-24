@@ -22,7 +22,7 @@ Setting up an EC2 instance on Amazon Web Services (AWS) is a prerequisite for [s
 ![AWS Step Two](serverAssets/AWSStepTwo.png)
 - Choose the instance type based on the amount of storage you think you will need
     - It is recommended that servers have at least 8 GB of memory, the current ILRG project uses a t3.large instance type
-    - The t2.micro instance (free tier eligible) instance type has 1 GB of memory, and is recommended if you expect only a small number of form submissions and no large media attachments
+    - The t3.medium instance type is the smallest instance type where you can still run and install all of the required services
 
 ![AWS Step Three](serverAssets/AWSStepThree.png)
 - Create a key-pair login and name the key pair (the name should be similar to your database name)
