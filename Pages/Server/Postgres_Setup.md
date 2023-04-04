@@ -94,7 +94,7 @@ sudo -u postgres psql
     ```
     create user username with login password 'usernamepassword';
 
-    alter role username with with superuser createdb createrole;
+    alter role username with superuser createdb createrole;
     ```
 
     - for example:
@@ -107,7 +107,7 @@ sudo -u postgres psql
 ## Create Database
 - Use the createdb commmand to create a PostgreSQL database, you cane it waht you like, in this example it is named 'test'. You should still be logged into postgres, so the command line should start with `postgres=#`
 ```
-create database test
+create database test;
 ```
 - Check that the database was created with the following command. You should see a list of databases.
 ```
