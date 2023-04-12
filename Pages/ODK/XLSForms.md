@@ -7,6 +7,13 @@ nav_order: 3
 # Guide to XLSForms
 XLSForms are how forms in ODK Central are formatted and detailed. They have several requirements but also provide flexibility in form choices and outputs. This page will first go over the ILRG XLSForms, and then how to create an XLSForm from scratch. 
 
+## **Upload Existing Form to ODK**
+- If you are doing the same customary land documentation as the ILRG project, you can add our forms to your ODK. The next section provides links and descriptions of each form. 
+- Navigate to the project folder where you want to add a form
+- Then click the new button and choose the form to upload, the ILRG project uses XLSForms in excel, choose the relevant xlsx form and then hit create (more on how to create an XLSForm below)
+    - You can also drag and drop your file into the gray box
+- If you get any errors, try changing the name of the file or the file_id attribute in the settings sheet (this could mean an old form had the same name or id, or if you’re updating a form that already exists, you should change both of these attributes)
+
 ## ILRG XLSForms
 Below you will find links to all of the XLSForms currently used by ILRG (as of June, 2021). They are configured to collect all of the data necessary to complete the customary land documentation process, from village identification to Objection, Correction and Confirmation. Below the link to each form is also a description of the form as well as things to keep in mind when collecting the relevant data.
 - [Form A1 Village Identification](/Pages/ODK/ODKAssets/A1_Village_Identification.xlsx)

@@ -32,6 +32,9 @@ Setting up an EC2 instance on Amazon Web Services (AWS) is a prerequisite for [s
 
 ![AWS Step Four](serverAssets/AWSStepFour.png)
 - In security settings: open up ports for SSH, HTTP and HTTPS
+- In 'Configure storage' **change the root volume from 8 to 100**, otherwise you will run out of space when installing services on the server
+
+![AWS Step Nine](serverAssets/AWSStepNine.png)
 
 ![AWS Step Five](serverAssets/AWSStepFive.png)
 - You can leave the other options as the default, then click 'Launch Instance'

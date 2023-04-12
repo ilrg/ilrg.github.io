@@ -1,3 +1,9 @@
+CREATE SCHEMA update;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
 CREATE TABLE "update".form_a1_village_identification (
 	geom geometry(point, 4326) NULL,
 	tec_name varchar(255) NULL,

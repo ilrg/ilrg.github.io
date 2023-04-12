@@ -51,8 +51,9 @@ cd /etc/postgresql/12/main/
 sudo nano postgresql.conf
 ```
     - Under connection settings (near the top of the file) change `listen_addresses = 'localhost'` to `listen_addresses = '*'`
+    - If there is a `#` before listen_addresses, make sure to delete it or the command will remain a comment and not do anything
     - Exit the GUI by hitting `CTRL + X` then hit `Y` to save your changes. Then hit enter to confirm the file name.
-- Open adn edit the table in `pg_hba.conf`
+- Open and edit the table in `pg_hba.conf`
 ```
 sudo nano pg_hba.conf
 ```
