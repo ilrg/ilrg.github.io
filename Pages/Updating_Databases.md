@@ -33,12 +33,14 @@ https://ilrg.ddns.net/v1/projects/[project_ID]/forms/[XML_form_ID]/submissions.c
 ### [ilrg_fzs.sh](General_Assets/ilrg_fzs.sh)
 - connects to the ilrg_fzs database and runs all of the update SQL scripts (described below), then commits those changes to the ilrg_fzs database
 - to use this code yourself, you will need to upload all of the update_form...sql scripts into a folder on your server, and then adjust the code in ilrg_fzs.sh to match your file path and log in
+
 ```
 psql --host=localhost --port=5432 --dbname=yourdbname --username=yourusername     <<OMG
 BEGIN;
 
 \i yourFilePath/update_form_b_village_governance.sql
 ```
+
 - run as a cron job 5 times per day
 
 ### [update_form...sql Scripts](General_Assets/updateSQLScripts)
