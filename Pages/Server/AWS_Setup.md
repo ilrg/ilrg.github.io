@@ -9,10 +9,10 @@ nav_order: 1
 Setting up an EC2 instance on Amazon Web Services (AWS) is a prerequisite for [setting up ODK Central](ODK_Central_Setup.html). We run the ILRG project on an EC2 instance because it acts as a virtual machine, and allows us to host all postgres databases, ODK Central, media files, etc. all in the same instance.
 
 ## Create an AWS Account
-- Go to the [AWS Homepage](https://aws.amazon.com/), then follow sign up instructions by clicking on 'Create an AWS Account' in the top right corner
+- Go to the [AWS Homepage](https://aws.amazon.com/), then follow sign up instructions by clicking on 'Create an AWS Account' in the top right corner.
     - Choose basic support for now, you can always update later on
     - If you are an IAM user for an account, or you already have an account as a root user, [sign in](https://console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin)
-- Once you have signed in, on the Management Console hompage under the 'Build a Solution' section, choose to 'Launch a Virtual Machine With EC2'
+- Once you have signed in, on the Management Console hompage under the 'Build a Solution' section, choose to 'Launch a Virtual Machine With EC2'.
 
 ## Launch Virtual Machine With EC2
 ![AWS Step One](serverAssets/AWSStepOne.png)
