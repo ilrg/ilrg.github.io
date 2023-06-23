@@ -12,7 +12,7 @@ Setting up an EC2 instance on Amazon Web Services (AWS) is a prerequisite for [s
 - Go to the [AWS Homepage](https://aws.amazon.com/), then follow sign up instructions by clicking on 'Create an AWS Account' in the top right corner
     - Choose basic support for now, you can always update later on
     - If you are an IAM user for an account, or you already have an account as a root user, [sign in](https://console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin)
-- Once you have signed in, on the Management Console hompage under the 'Build a Solution' section, choose to 'Launch a Virtual Machine With EC2'
+- Once you have signed in, on the Management Console hompage under the 'Build a Solution' section, choose to 'Launch a Virtual Machine With EC2'.
 
 ## Launch Virtual Machine With EC2
 ![AWS Step One](serverAssets/AWSStepOne.png)
