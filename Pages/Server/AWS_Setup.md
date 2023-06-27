@@ -41,7 +41,7 @@ Setting up an EC2 instance on Amazon Web Services (AWS) is a prerequisite for [s
 - **Make sure you save your key pair in a place where it will not be deleted, and write down where you saved it**
 
 ## Allocate and Associate IP Address
-- After launching, go to the 'Elastic IP's' menu under Network & Security. Then click on 'Allocate Elastic IP Address'
+- After launching, go to the 'Elastic IP's' menu under Network & Security. Then click on 'Allocate Elastic IP Address'. Use the default settings. Please note, by default you can only allocate five Elastic IP addresses per region. You can request more from AWS Support if you require more.
 
 ![AWS Step Six](serverAssets/AWSStepSix.png)
 - Associate the Elastic IP address you just created with the EC2 instance created in the last Step
