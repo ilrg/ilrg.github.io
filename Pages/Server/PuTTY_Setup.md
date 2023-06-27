@@ -1,11 +1,14 @@
 ---
 layout: default
-title: PuTTY Setup
+title: Connecting to the Server
 parent: Server
 nav_order: 2
 ---
 
-# Installing PuTTY
+# Connecting to the Server
+The required services, including ODK Central, Webmin, and PostgreSQL will now be installed onto our server instance. This will be done through the command line. The easiest way to connect is by using PuTTY, but other methods are also shown below. 
+
+## Installing PuTTY
 PuTTY is a free and open-source terminal emulator, serial console and network file transfer application. To make managing all the data files and databases easier. We use PuTTY for any software installations and for any server configurations. We will need to use PuTTY later on to [log onto the server to install Webmin](/Pages/Server/Webmin_Setup.html).
 
 [Putty for MacOS](https://www.ssh.com/academy/ssh/putty/mac)
@@ -17,6 +20,8 @@ It is recommended to install PuTTY using [Homebrew](https://brew.sh/):
 ```
 brew install putty
 ```
+## Log into Server via PuTTY GUI
+
 
 ## Log into Server via Terminal Command Line
 - First navigate in your terminal to the folder where you stored your .ppk or .pem file using ```cd``` commands
