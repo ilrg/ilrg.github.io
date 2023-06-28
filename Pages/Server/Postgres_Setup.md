@@ -78,12 +78,13 @@ cd -
 ```
 sudo systemctl restart postgresql
 ```
-- Install postgis
+- Install postgis:
 ```
 sudo apt update
 sudo apt upgrade
 sudo apt install postgis postgresql-12-postgis-3
 ```
+- Press 'Y' when prompted.
 
 ## Create User
 - You should still be logged onto the server. Then connect to the postgres server:
