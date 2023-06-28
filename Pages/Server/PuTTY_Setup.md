@@ -21,6 +21,7 @@ It is recommended to install PuTTY using [Homebrew](https://brew.sh/):
 brew install putty
 ```
 ## Log into Server via PuTTY GUI
+#To-do: write this part
 ![PuttyGUIOne](serverAssets/Server3PuttyGuiCred.PNG)
 ![PuttyGUITwo](serverAssets/Server3PuttyGuiIP.PNG)
 
@@ -49,5 +50,5 @@ This private key will be ignored.` try using the `chmod 400` command to modify p
 - Then try to log in again with ssh
 
 ![KeyErrorOne](serverAssets/Server1keyerrorpermission.png)
-![KeyErrorSolution](Server2keyerroroldsolution1.png)
+![KeyErrorSolution](serverAssets/Server2keyerroroldsolution1.png)
 **[Previous](AWS_Setup.html) <> [Next](ODK_Central_Setup.html)**
