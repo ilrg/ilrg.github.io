@@ -140,7 +140,7 @@ sudo docker compose ps
 ```
 - If you encounter any errors, the above code snippets might be out of date, and you should check the [most recent instructions for downloading docker on Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and the [most recent instructions for installing ODK Central on Ubuntu](https://docs.getodk.org/central-install-digital-ocean/#central-install-digital-ocean) 
 - The domain name you set up with No-IP and entered when configuring ODK Central can now be visited and should display and ODK Central login page. It might take up for a day for the domain to start working, however.
-- Once the domain is working, create an administrator account so you can log in and create new users
+- Once the domain is working, create an administrator account so you can log in and create new users.
     - make sure you are in the central folder on your server
     ```
     cd central
@@ -152,7 +152,7 @@ sudo docker compose ps
     ```
 
   - Enter a password when prompted
-    - Make the account an administrator account. again subsituting your email address:
+  - Make the account an administrator account, again substituting your email address:
     ```
     sudo docker compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.COM user-promote
     ```
