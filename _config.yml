@@ -36,3 +36,4 @@ search:
 # Footer content
 # appears at the bottom of every page's main content
 footer_content: ![USAIDLogo](Logo.png)
+#Footer not working - deprecated. TODO: Fix
