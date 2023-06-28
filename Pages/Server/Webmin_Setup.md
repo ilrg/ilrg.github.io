@@ -8,38 +8,7 @@ nav_order: 1
 # Instructions for Setting up Webmin
 
 ## Connect to the Server
-There are two options to connect to the server, you can log onto the server via your computer's terminal, using a key-pair, or you can use the console that AWS provides.
-
-#### **Connect on your Computer's terminal**
-- [PuTTY needs to be installed](PuTTY_Setup.html) to make changes to the server instance and to log in to the server
-- First, navigate to where you stored your .ppk or .pem file (from when you created the EC2 instance). For example, in the command line:
-```
-cd Desktop/TetraTech
-```
-- Log in to PuTTY with the .ppk key (.pem key on mac). The user will be ubuntu, as that is the default for EC2 instance running Ubuntu. The hostname is the IP address for our EC2 instance (the same one you used to register the domain), which you can find under the instance summary in your AWS console. In the command line:
-```
-ssh -i yourSSHKey.ppk user@hostname
-```
-example:
-```
-ssh -i ILRG-test.pem ubuntu@18.211.191.151
-```
-- If these commands are successful, the terminal should look something like this:
-
-    ![ODKStepFour](serverAssets/ODKStepFour.png)
-- Note the green font and the start of the command line which should list the username and then the private IP address for the server
-    - This confirms that you are running commands within the server
-
-#### **Connect on AWS Console**
-- Go to 'EC2' > 'Instance' and then click on the instance you just created, then hit 'Connect'
-
-    ![ODKStepFive](serverAssets/ODKStepFive.png)
-- On the 'EC2 Instance Connect' tab, click 'Connect'
-
-    ![ODKStepSix](serverAssets/ODKStepSix.png)
-- A new tab will pop up with the server's console
-
-    ![ODKStepSeven](serverAssets/ODKStepSeven.png)
+See the [Connecting to the Server](PuTTY_Setup.html) page for instructions on how to connect to the server.
 
 ## Install Webmin
 - Update and upgrade packages
