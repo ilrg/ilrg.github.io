@@ -25,8 +25,10 @@ Preqrequisites for installing ODK Central is a [running EC2 instance on AWS](AWS
 ## Install ODK Central
 [Instructions](https://docs.getodk.org/central-install-digital-ocean/#getting-and-setting-up-central) by Open Data Kit for installing ODK Central. These instructions are repeated and enumerated upon below.
 
+
 ### Connect to the Server
 See the [Connecting to the Server](PuTTY_Setup.html) page for instructions on how to connect to the server.
+
 
 ### Configure Server
 - Set a root password for your server (you will need it to log into the server in PGAdmin later). After entering the command, you will be prompted to type and then retype a password. In the command line:
