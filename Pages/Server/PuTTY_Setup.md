@@ -21,7 +21,8 @@ It is recommended to install PuTTY using [Homebrew](https://brew.sh/):
 brew install putty
 ```
 ## Log into Server via PuTTY GUI
-
+![PuttyGUIOne](serverAssets/Server3PuttyGuiCred.PNG)
+![PuttyGUITwo](serverAssets/Server3PuttyGuiIP.PNG)
 
 ## Log into Server via Terminal Command Line
 - First navigate in your terminal to the folder where you stored your .ppk or .pem file using ```cd``` commands
@@ -47,4 +48,6 @@ This private key will be ignored.` try using the `chmod 400` command to modify p
     ```
 - Then try to log in again with ssh
 
+![KeyErrorOne](serverAssets/Server1keyerrorpermission.png)
+![KeyErrorSolution](Server2keyerroroldsolution1.png)
 **[Previous](AWS_Setup.html) <> [Next](ODK_Central_Setup.html)**
