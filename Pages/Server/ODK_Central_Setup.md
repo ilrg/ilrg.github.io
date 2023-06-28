@@ -150,7 +150,8 @@ sudo docker compose ps
     ```
     sudo docker compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.COM user-create
     ```
-        - Enter a password
+
+  - Enter a password when prompted
     - Make the account an administrator account. again subsituting your email address:
     ```
     sudo docker compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.COM user-promote
