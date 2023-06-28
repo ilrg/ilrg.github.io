@@ -139,20 +139,21 @@ sudo docker compose up -d
 sudo docker compose ps
 ```
 - If you encounter any errors, the above code snippets might be out of date, and you should check the [most recent instructions for downloading docker on Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and the [most recent instructions for installing ODK Central on Ubuntu](https://docs.getodk.org/central-install-digital-ocean/#central-install-digital-ocean) 
-- The domain main you set up with No-IP and entered when configuring ODK Central can now be visited and should display and ODK Central login page. It might take up for a day for the domain to start working, however.
+- The domain name you set up with No-IP and entered when configuring ODK Central can now be visited and should display and ODK Central login page. It might take up for a day for the domain to start working, however.
 - Once the domain is working, create an administrator account so you can log in and create new users
     - make sure you are in the central folder on your server
     ```
     cd central
     ```
+    - For the following two commands, be careful. Do not copy and paste these directly. You must edit in your e-mail address. It is suggested to use a text editor to do this; copy in these commands, replace the text that is displayed in capital letters with your e-mail, then copy and paste that into your terminal.
     - Type in the following command, substituting your email address:
     ```
-    sudo docker compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.com user-create
+    sudo docker compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.COM user-create
     ```
         - Enter a password
     - Make the account an administrator account. again subsituting your email address:
     ```
-    sudo docker compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.com user-promote
+    sudo docker compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.COM user-promote
     ```
 
 You should access ODK Central through the docker whenever you want to add users or edit permissions.
