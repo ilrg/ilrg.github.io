@@ -16,16 +16,19 @@ See the [Connecting to the Server](PuTTY_Setup.html) page for instructions on ho
 sudo apt update
 sudo apt upgrade
 ```
+    
     - Type `Y` when asked if you want to continue
 - Install dependency packages:
 ```
 sudo apt install software-properties-common apt-transport-https
 ```
+    
     - Type `Y` when asked if you want to continue
 - Download the Webmin PGP key with wget and add it to your system's set of keys
 ```
 wget -q -O- http://www.webmin.com/jcameron-key.asc | sudo apt-key add -
 ```
+    
     - You should see a message: `OK`
 - Manually add the Webmin repository:
 ```
@@ -35,7 +38,9 @@ sudo add-apt-repository "deb [arch=amd64] http://download.webmin.com/download/re
 ```
 sudo apt install webmin
 ```
+    
     - Type `Y` when asked if you want to continue
+- Important: In the next step you will enable the firewall. Do not close out of your terminal before disabling it! You may be unable to get back in if the firewall is enabled. There will also be a warning telling you that you may lose connections; this is okay, just be sure not to close the terminal window.
 - Configure the firewall and then reload it for the changes to take effect
 ```
 sudo ufw enable
@@ -50,9 +55,11 @@ sudo ufw status
 ```
 sudo ufw disable
 ```
+- It is now safe to close the terminal window.
+- For the following command, be careful. Do not copy and paste this command directly. You must edit in your desired password. It is suggested to use a text editor to do this; copy in this command, replace the text that is displayed in capital letters with your desired password, then copy and paste that into your terminal.
 - Set admin password:
 ```
-sudo /usr/share/webmin/changepass.pl /etc/webmin root yourpassword
+sudo /usr/share/webmin/changepass.pl /etc/webmin root YOURPASSWORD
 ```
 
 ## Configure AWS For Webmin
