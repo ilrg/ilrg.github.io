@@ -9,7 +9,7 @@ nav_order: 5
 We installed ODK Central on an AWS based Ubuntu server in a previous step. In this step, we will create and configure the postgres database, used to manage all of the data on the same EC2 instance. This database will contain two schemas: public and update.
 
 ## Connect to the Server
-See the beginning of the [Webmnin Set Up Instructions](Webmin_Setup.html) for instructions on how to connect to the server.
+See the [Connecting to the Server](PuTTY_Setup.html) page for instructions on how to connect to the server.
 
 ## Install PostgreSQL
 - After successfully logging into the server, run the package update and then install the postgres package:
