@@ -7,7 +7,7 @@ nav_order: 1
 # Integrated Land and Resource Governance
 ## Complete Tech Documentation and Project Guide
 
-Welcome to the documentation for the Integrated Land and Resource Governance (ILRG) customary land documentation process. This process was developed as an extension of the Mobile Applications to Secure Tenure (MAST) approach to land technology, a USAID project.
+Welcome to the documentation for the Integrated Land and Resource Governance (ILRG) customary land documentation process. This process was developed as an extension of the [Mobile Applications to Secure Tenure (MAST)](https://www.land-links.org/tool-resource/mapping-approaches-for-securing-tenure-mast-learning-platform/) approach to land technology, a USAID project.
 
 The image below provides an overview of all the different tech components (including software, servers and batch scripts) used to run the ILRG customary land documentation process as of January 2023. 
 
