@@ -8,32 +8,32 @@ nav_order: 2
 # Parcel Certificate Annex
 
 ### Set Up QGIS Print Layout
-- We will use the same instructions as when we set up the Certificate print layout
-- Go to 'Project' > 'New Print Layout'
+- We will use the same instructions as when we set up the Certificate print layout.
+- Go to 'Project' > 'New Print Layout'.
 
 ![CertificateOne](CertificateAssets/CertificateOne.png)
-- Name the layout Certificate_x, where x is the chiefdom
+- Name the layout Certificate_x, where x is the chiefdom.
     - ex: Certificate_chikwa
 
 ![CertificateTwo](CertificateAssets/CertificateTwo.png)
-- Right click on the empty panel and hit 'Page Properties'
+- Right click on the empty panel and hit 'Page Properties'.
 
 ![CertificateThree](CertificateAssets/CertificateThree.png)
-- Set the size of the page to 'A4' and the Orientation to 'Portrait'
+- Set the size of the page to 'A4' and the Orientation to 'Portrait'.
 
 ![CertificateFour](CertificateAssets/CertificateFour.png)
-- On the side panel, go to 'Atlas', and then check 'Generate an atlas'
+- On the side panel, go to 'Atlas', and then check 'Generate an atlas'.
     - Under configuration set the fields to the following:
         - Coverage layer: `certification`
         - Page name: `parcel_id`
-- Click the check box next to 'Filter with', then click on the expression icon
+- Click the check box next to 'Filter with', then click on the expression icon.
 
 ![CertificateFive](CertificateAssets/CertificateFive.png)
-- In the pop up window, enter the following expression: `dem_zone = x`, where x is a different zone, as we want a different print layout for each chiefdom
-    - in the example below, `dem_zone = 'Zone 15'`, then hit ok
+- In the pop up window, enter the following expression: `dem_zone = x`, where x is a different zone, as we want a different print layout for each chiefdom.
+    - in the example below, `dem_zone = 'Zone 15'`, then click ok.
 
 ![CertificateSix](CertificateAssets/CertificateSix.png)
-- Check the box next to 'Sort by', then click on the expression icon and set the field to `village||parcel`, then hit ok
+- Check the box next to 'Sort by', then click on the expression icon and set the field to `village||parcel`, then click ok.
 
 ![CertificateSeven](CertificateAssets/CertificateSeven.png)
 ![CertificateEight](CertificateAssets/CertificateEight.png)
@@ -51,10 +51,10 @@ nav_order: 2
 ![CertificateTwentyFive](CertificateAssets/CertificateTwentyFive.png)
 
 ### Parties Information
-- Use the 'Add Attribute Table' tool and click and drag to create the table
-- Set the following in the 'Item Properties' panel
+- Use the 'Add Attribute Table' tool and click and drag to create the table.
+- Set the following in the 'Item Properties' panel:
     - Source: Relation Children
-        - this relation was set up in a previous step
+        - This relation was set up in a previous step.
     - Relation: parties_join
     - Filter with: ``` "party_role" = 'Landowner' ```
 
@@ -69,14 +69,14 @@ nav_order: 2
 | id_type | ID | Middle left | Automatic |
 | nrc_number | ID# | Middle left | Automatic |
 
-- Configure sorting
+- Configure sorting:
 
 | Attribute | Sort Order |
 | --- | --- |
 | ```coalesce(  format_date(  "birthdate" , 'dd/MM/yyyy') ,  "year_of_birth"  ,   "age_range")``` | Ascending |
 
 ![CertificateSixteen](CertificateAssets/CertificateSixteen.png)
-- Then hit 'OK'
+- Then click 'OK'.
 
 ### Main Text
 - Use the 'Add Label' tool with the following text:
@@ -85,7 +85,7 @@ nav_order: 2
 This extract from the village land register serves to certify that the following persons are registered as ‘Persons of Interest’ in respect to the parcel of land referenced above.’
 
 ### Persons of Interest Table
-- Use the 'Add Attribute Table' tool and set the following 'Main Properties'
+- Use the 'Add Attribute Table' tool and set the following 'Main Properties'.
     - Source: Relation Children
     - Relation: parties_join
     - Filter with: ``` "party_role" = 'Person of interest' ```
@@ -101,7 +101,7 @@ This extract from the village land register serves to certify that the following
 | id_type | ID | Middle left | Automatic |
 | nrc_number | ID# | Middle left | Automatic |
 
-- Configure sorting
+- Configure sorting:
 
 | Attribute | Sort Order |
 | --- | --- |
