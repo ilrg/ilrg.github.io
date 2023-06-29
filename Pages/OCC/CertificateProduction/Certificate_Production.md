@@ -7,7 +7,7 @@ has_children: true
 ---
 # Certificate Production
 
-Certificate production is the final phase of OCC and the customary land documentation process. Certificates are produced in QGIS using the Atlas tool, and contain all the relevant information on parties, landholders and parcel boundaries. 
+Certificate production is the final phase of OCC and ILRG's adaptation of the [MAST project's](https://www.land-links.org/tool-resource/mapping-approaches-for-securing-tenure-mast-learning-platform/) customary land documentation process. Certificates are produced in QGIS using the Atlas tool, and contain all the relevant information on parties, landholders and parcel boundaries. 
 
 This section of the documentation goes over how to configure and set up QGIS to produce the main certificate, as well as the annex for party information that could not fit on the main certificate. 
 
