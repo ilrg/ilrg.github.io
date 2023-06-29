@@ -6,7 +6,7 @@ has_children: true
 ---
 # Instructions for Server Setup
 
-The first step in our MAST implementaion is to set up the Amazon EC2 instance that will host our ODK Central, Webmin, and PostgreSQL databases and schemas. These services allow us to store and manage all the data needed for producing land certificates.
+The first step in our implementation of the [MAST project](https://www.land-links.org/tool-resource/mapping-approaches-for-securing-tenure-mast-learning-platform/) is to set up the Amazon EC2 instance that will host our ODK Central, Webmin, and PostgreSQL databases and schemas. These services allow us to store and manage all the data needed for producing land certificates.
 
 ODK’s infrastructure collects our data, but is not a good place to manage the data. We push out the data we collect with ODK to another database, where we validate, store, analyze and produce certificates. This requires 2 database schemas, the first is an intermediary database (update schema) that holds all the incoming data, the second database has only validated data (public schema). Between the first and second database, the data is cleaned and validated through a series of SQL scripts. The public schema holds the checked and validated data. 
 
