@@ -11,14 +11,14 @@ ODK Central is a server option for ODK (Open Data Kit). It stores forms and perm
 Preqrequisites for installing ODK Central is a [running EC2 instance on AWS](AWS_Setup.html).
 
 ## Register a Domain
-- Create an account with [No IP](https://www.noip.com/), and then log in
-- Under 'Dynamic DNS' on the right panel, under 'No-IP Hostnames', click on 'Create Hostname'
+- Create an account with [No IP](https://www.noip.com/), and then log in.
+- Under 'Dynamic DNS' on the right panel, under 'No-IP Hostnames', click on 'Create Hostname'.
 
 ![ODKStepOne](serverAssets/ODKStepOne.png)
 - In the new window, choose your Hostname and free domain. Under 'IPV4 Address' put the Elastic IP Address that you allocated and associated with you Amazon EC2 server.
 
 ![ODKStepTwo](serverAssets/ODKStepTwo.png)
-- The hostname should now appear under 'No-IP Hostnames', and also list the hostname, and the IP Address associated with you Amazon EC2 server
+- The hostname should now appear under 'No-IP Hostnames', and also list the hostname, and the IP Address associated with you Amazon EC2 server.
 
 ![ODKStepThree](serverAssets/ODKStepThree.png)
 
@@ -37,7 +37,7 @@ See the [Connecting to the Server](PuTTY_Setup.html) page for instructions on ho
     sudo passwd root
     ```
 
-- Set up and configure [Docker](https://docs.docker.com/engine/install/ubuntu/)
+- Set up and configure [Docker](https://docs.docker.com/engine/install/ubuntu/).
 
     ```
     sudo apt-get update
@@ -50,7 +50,7 @@ See the [Connecting to the Server](PuTTY_Setup.html) page for instructions on ho
         lsb-release
     ```
 
-    - Type `Y` when asked if you want to continue
+    - Type `Y` when asked if you want to continue.
 
     ```
     sudo mkdir -m 0755 -p /etc/apt/keyrings
@@ -70,7 +70,7 @@ See the [Connecting to the Server](PuTTY_Setup.html) page for instructions on ho
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     ```
 
-    - Type `Y` when asked if you want to continue
+    - Type `Y` when asked if you want to continue.
 - Test that everyting is working correctly by running a test container:
 
     ```
@@ -78,7 +78,7 @@ See the [Connecting to the Server](PuTTY_Setup.html) page for instructions on ho
     ```
 
 - Configure docker:
-    - Set Docker to start up every time the server starts up
+    - Set Docker to start up every time the server starts up:
     ```
     sudo systemctl enable docker
     ```
@@ -86,14 +86,14 @@ See the [Connecting to the Server](PuTTY_Setup.html) page for instructions on ho
     ```
     sudo ufw disable
     ```
-    - you should see the message `Firewall stopped and disabled on system startup.`
+    - You should see the message `Firewall stopped and disabled on system startup.`
 
 ### Download and Install ODK Central
 - Clone ODK Central from github:
 ```
 git clone https://github.com/getodk/central
 ```
-- Navigate to the Central folder to start working with the ODK software just installed from github
+- Navigate to the Central folder to start working with the ODK software just installed from Github.
 ```
 cd central
 ```
@@ -106,11 +106,11 @@ git submodule update -i
     ```
     mv .env.template .env
     ```
-    - Edit the file. this command will launch a text editing application:
+    - Edit the file. This command will launch a text editing application:
     ```
     nano .env
     ```
-        - Change the `DOMAIN` line so that after the `=` is the domain name you registered with No-IP. For example: `DOMAIN = ilrg.ddns.net`. Do not include anything like http://
+        - Change the `DOMAIN` line so that after the `=` is the domain name you registered with No-IP. For example: `DOMAIN = ilrg.ddns.net`. Do not include anything like 'http://'
         - This domain name will be home how ODK Central is accessed later on.
         - Change the `SYSADMIN_EMAIL` line to your own email. This will allow you to be notified if something is wrong with your security certificate.
     - Hit `CTRL + X` to exit the text editor, then type `Y` to confirm the changes, then press enter to confirm the file name (don't change the file name)
@@ -127,21 +127,21 @@ git submodule update -i
     ```
     sudo docker compose up --no-start
     ```
-- If you get an error that there is no space left on the device use the command
+- If you get an error that there is no space left on the device use the command:
 ```
 sudo docker system prune
 ```
-- Check that everything is working properly by starting up the server again
+- Check that everything is working properly by starting up the server again:
 ```
 sudo docker compose up -d
 ```
 ```
 sudo docker compose ps
 ```
-- If you encounter any errors, the above code snippets might be out of date, and you should check the [most recent instructions for downloading docker on Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and the [most recent instructions for installing ODK Central on Ubuntu](https://docs.getodk.org/central-install-digital-ocean/#central-install-digital-ocean) 
+- If you encounter any errors, the above code snippets might be out of date, and you should check the [most recent instructions for downloading docker on Ubuntu](https://docs.docker.com/engine/install/ubuntu/) and the [most recent instructions for installing ODK Central on Ubuntu](https://docs.getodk.org/central-install-digital-ocean/#central-install-digital-ocean) .
 - The domain name you set up with No-IP and entered when configuring ODK Central can now be visited and should display and ODK Central login page. It might take up for a day for the domain to start working, however.
 - Once the domain is working, create an administrator account so you can log in and create new users.
-    - make sure you are in the central folder on your server
+    - Make sure you are in the central folder on your server:
     ```
     cd central
     ```
@@ -151,7 +151,7 @@ sudo docker compose ps
     sudo docker compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.COM user-create
     ```
 
-  - Enter a password when prompted
+  - Enter a password when prompted.
   - Make the account an administrator account, again substituting your email address:
     ```
     sudo docker compose exec service odk-cmd --email YOUREMAIL@ADDRESSHERE.COM user-promote
