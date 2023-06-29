@@ -12,10 +12,10 @@ Prerequisites:
 - [EC2 server instance](AWS_Setup.html) running Ubuntu 20.04 with [PostgreSQL database instances installed](Postgres_Setup.html).
 
 ## Download PG Admin
-- [Install](https://www.pgadmin.org/download/) PGADmin as a desktop application.
+- [Install](https://www.pgadmin.org/download/) PGAdmin as a desktop application.
 - Choose the version you want to download and click the link, then click on the files to download them.
 ![PGAdminStepOne](serverAssets/PGAdminStepOne.png)
-- Once the files have downloaded, click on the pgadmin4 download, a new window should pop up, agree to the license, then move pgAdmin to your applications folder.
+- Once the files have downloaded, click on the pgAdmin4 download, a new window should pop up, agree to the license, then move pgAdmin to your applications folder.
 - Navigate to where you downloaded pgAdmin and open it.
 - pgAdmin will then ask you to set a master password, **make sure you write down and remember this password**, then click okay.
 
@@ -63,7 +63,7 @@ Prerequisites:
 - Under privileges:
     - Choose the privileges of the user you created, at minimum, the user should be able to login and inherit rights from the parent roles.
 - Under membership:
-    - Decide if the user is part of a group, and designate its parent roles
+    - Decide if the user is part of a group, and designate its parent roles.
 - Then hit save, you can always adjust permissions by clicking on a user, then going to properties, and toggling different options under the privileges tab (you must be logged into the server as someone with permission to create roles to make these changes).
 
 You should have all the required infrastructure downloaded and working on the server (ODK Central, Webmin and PostgreSQL), with at least one database holding two schemas: public and update. Next, the documentation covers how to use and configure Open Data Kit for collecting customary land documentation data. 
