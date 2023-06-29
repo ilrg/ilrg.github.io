@@ -17,17 +17,17 @@ Load the following layers:
 - Google Satellite
 
 ### Set Up Certificate
-- Go to 'Project' > 'New Print Layout'
+- Go to 'Project' > 'New Print Layout'.
 
 ![OCCOne](OCCAssets/OCCOne.png)
-- Name the layout
-- Set the page properties by right clicking on the empty panel, set the size to 'A4' and the Orientation to 'Portrait'
+- Name the layout.
+- Set the page properties by right clicking on the empty panel, set the size to 'A4' and the Orientation to 'Portrait'.
 
 ![OCCTwo](OCCAssets/OCCTwo.png)
 
 ### Configure Atlas
-- Under the 'Atlas' tab on the right side panel, click the checkbox next to 'Generate an atlas'
-- Set the following under 'Configuration'
+- Under the 'Atlas' tab on the right side panel, click the checkbox next to 'Generate an atlas'.
+- Set the following under 'Configuration'.
     - Coverage layer: parcels
     - Page name: dem_parcel
     - Sort by: dem_parcel
@@ -35,8 +35,8 @@ Load the following layers:
 ![OCCThree](OCCAssets/OCCThree.png)
 
 ### Add Relation to Project
-- This relation will be used later to configure the attribute tables in the certificates
-- Go to 'Project' > 'Project Properties' and then click on the 'Relations' tab. Then click on 'Add Relation'
+- This relation will be used later to configure the attribute tables in the certificates.
+- Go to 'Project' > 'Project Properties' and then click on the 'Relations' tab. Then click on 'Add Relation'.
 
 ![CertificateThirteen](CertificateProduction/CertificateAssets/CertificateThirteen.png)
 - Configure the relation as follows:
@@ -79,12 +79,12 @@ Load the following layers:
 ![OCCSix](OCCAssets/OCCSix.png)
 
 ### Parcel Map
-- Use the ‘Add Map’ tool, select and drag the box so that the map takes up the bottom half of the page
-- Make sure the parcels are labelled in the main window of QGIS using Layer Properties
-- Under ‘Item Properties’ > ‘Controlled by Atlas’ should be checked, set the Margin around feature to 10%
+- Use the ‘Add Map’ tool, select and drag the box so that the map takes up the bottom half of the page.
+- Make sure the parcels are labelled in the main window of QGIS using Layer Properties.
+- Under ‘Item Properties’ > ‘Controlled by Atlas’ should be checked, set the Margin around feature to 10%.
 
 ![OCCSeven](OCCAssets/OCCSeven.png)
-- Under 'Item Properties' > 'Grid', add new grid by clicking on the green plus sign, or select an existing grid and click 'Modify Grid...'
+- Under 'Item Properties' > 'Grid', add new grid by clicking on the green plus sign, or select an existing grid and click 'Modify Grid...'.
 
 ![OCCEight](OCCAssets/OCCEight.png)
 - A new panel should pop up. Set the grid appearance to the following:
