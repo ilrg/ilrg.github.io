@@ -17,10 +17,10 @@ Geonode is a data management solution for hosting and serving map data. The Geon
 ### [Tutorial Video](https://youtu.be/IkgNbam9KEM)
 
 ### Upload Data from QGIS
-- Right click on Geonode in the browser on the left side and add a new connection
+- Right click on Geonode in the browser on the left side and add a new connection.
 
 ![Geonode1](General_Assets/Geonode1.png)
-- Name it and put in the url http://52.2.213.217/ in, like below and click OK (You can ignore the rest of the settings)
+- Name it and put in the url http://52.2.213.217/ in, like below and click OK (You can ignore the rest of the settings).
 
 ![Geonode1](General_Assets/Geonode1.png)
 - Open your new GeoNode folder there and you should see a list of all the layers published, which you can add to your map like any other layer. Note: layers are in two categories – WMS and WFS – which have different functions. A WFS will appear as a vector layer and can be styled and edited in QGIS as needed. A WMS is mostly just an image layer, so it can’t be styled here. We’re working on improving some of the basic styles on our end.
