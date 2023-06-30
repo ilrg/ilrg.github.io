@@ -13,7 +13,7 @@ If there are issues connecting to Webmin, ZCLAS or the Postgres databases, you s
 - Log in to AWS, and go to the EC2 instance. Under 'Security', click on 'Security groups'.
 
 ![Troubleshooting1](serverAssets/Troubleshooting1.png)
-- Then click 'Edit Inbound Rules'
+- Then click 'Edit Inbound Rules'.
 
 ![Troubleshooting2](serverAssets/Troubleshooting2.png)
 - Check that ports such as 5432 (for postgres) and 10000 (for webmin) are open. You want to check the port for whatever service you are unable to connect to.
@@ -21,20 +21,20 @@ If there are issues connecting to Webmin, ZCLAS or the Postgres databases, you s
 ![Troubleshooting3](serverAssets/Troubleshooting3.png)
 
 ## Reboot Instance
-- A quick solution is to try and reboot the instance
-- Log into AWS and go to the EC2 Instances. Highlight the instance you want to reboot. Then under ‘Instance State’ choose ‘Reboot instance’
+- A quick solution is to try and reboot the instance.
+- Log into AWS and go to the EC2 Instances. Highlight the instance you want to reboot. Then under ‘Instance State’ choose ‘Reboot instance’.
 
 ![Troubleshooting4](serverAssets/Troubleshooting4.png)
 
 ## Check Systems are Enabled
 Sometimes services like Tomcat and Nginx that are required for parts of the ILRG system become disabled. Checking that services you need are enabled is another important step in troubleshooting why part of the system might have broken down. 
 
-- Log into the server command line via PuTTY
+- Log into the server command line using your preferred method.
 - Then run the following command:
 ```
 systemctl list-unit-files
 ```
-- Enable any systems that should be enabled, but are listed as disabled by using the command
+- Enable any systems that should be enabled, but are listed as disabled by using the command:
 ```
 systemctl enable –-now service
 ```
@@ -58,7 +58,7 @@ A last resort is detaching the volume of the server from the current instance, a
 - Then re-select the volume, and go to ‘Actions’ then ‘Attach Volume’, and then choose the instance you just created.  
 
 ![Troubleshooting8](serverAssets/Troubleshooting8.png)
-- Log into the new server using PuTTY and the .ppk key you saved from a previous 
+- Log into the new server using PuTTY and the .ppk key you saved from a previous instance.
 - Use a chroot environment to trouble shoot the original instance by accessing its information through the rescue instance using the following commands:
 ```
 rescuedev=/dev/nvme1n1p1
@@ -76,7 +76,7 @@ systemctl list-unit-files
 ```
 systemctl enable –-now ssh.service
 ```
-- Enable any other services required
+- Enable any other services required.
 - Now you can stop the rescue instance. And then detach and reattach the volume to the original instance. And then restart the original instance (following a similar process to the previous steps). 
 
 **[Previous](PGAdmin.html)** <> **[Next](/Pages/ODK/Open_Data_Kit.html)**

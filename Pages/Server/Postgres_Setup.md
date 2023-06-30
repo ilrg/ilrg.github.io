@@ -9,7 +9,7 @@ nav_order: 5
 We installed ODK Central on an AWS based Ubuntu server in a previous step. In this step, we will create and configure the postgres database, used to manage all of the data on the same EC2 instance. This database will contain two schemas: public and update.
 
 ## Connect to the Server
-See the beginning of the [Webmnin Set Up Instructions](Webmin_Setup.html) for instructions on how to connect to the server.
+See the [Connecting to the Server](PuTTY_Setup.html) page for instructions on how to connect to the server.
 
 ## Install PostgreSQL
 - After successfully logging into the server, run the package update and then install the postgres package:
@@ -20,8 +20,8 @@ See the beginning of the [Webmnin Set Up Instructions](Webmin_Setup.html) for in
     sudo apt install postgresql postgresql-contrib
     ```
 
-    - Hit `Y` to confirm changes when prompted
-- Upgrade packages
+    - Hit `Y` to confirm changes when prompted.
+- Upgrade packages:
 
     ```
     sudo apt upgrade
@@ -35,7 +35,7 @@ sudo service postgresql status
 sudo -u postgres psql
 ```
     - You should see the command line now start with `postgres=#`
-- Quit the server to return to the command line
+- Quit the server to return to the command line:
 ```
 \q
 ```
@@ -57,7 +57,7 @@ sudo nano postgresql.conf
 ```
 sudo nano pg_hba.conf
 ```
-    Change the table at the bottom to the following, leave everything else the same:
+    - Change the table at the bottom to the following, leave everything else the same:
     ```
     # Database administrative login by Unix domain socket
     local   all             postgres                             trust
@@ -78,27 +78,28 @@ cd -
 ```
 sudo systemctl restart postgresql
 ```
-- Install postgis
+- Install postgis:
 ```
 sudo apt update
 sudo apt upgrade
 sudo apt install postgis postgresql-12-postgis-3
 ```
+- Press 'Y' when prompted.
 
 ## Create User
 - You should still be logged onto the server. Then connect to the postgres server:
 ```
 sudo -u postgres psql
 ```
-    - You should see the command line now start with `postgres=#`
-- Create a user, and then alter their role to make the user a superuser with create database and create role privileges
+    - You should see the command line now start with `postgres=#`.
+- Create a user, and then alter their role to make the user a superuser with create database and create role privileges:
     ```
     create user username with login password 'usernamepassword';
 
     alter role username with superuser createdb createrole;
     ```
 
-    - for example:
+    - For example:
         ```
         create user derek2 with login password 'derek2password';
 
@@ -106,7 +107,7 @@ sudo -u postgres psql
         ```
 
 ## Create Database
-- Use the createdb commmand to create a PostgreSQL database, you cane it waht you like, in this example it is named 'test'. You should still be logged into postgres, so the command line should start with `postgres=#`
+- Use the createdb commmand to create a PostgreSQL database, you cane it waht you like, in this example it is named 'test'. You should still be logged into postgres, so the command line should start with `postgres=#`:
 ```
 create database test;
 ```
@@ -114,55 +115,55 @@ create database test;
 ```
 \l
 ```
-- for example:
+- For example:
     ![PostgresStepOne](serverAssets/PostgresStepOne.png)
-- log into the new database and create postgis extension
-    - First, exit the postgres command line, so you can log into the new database instance
+- Log into the new database and create postgis extension
+    - First, exit the postgres command line, so you can log into the new database instance:
     ```
     \q
     ```
-    - Log into the database just created
+    - Log into the database just created:
     ```
     psql databasename postgres
     ```
-    ex:
+    - For example:
     ```
     psql test postgres
     ```
-    - The command line should now start with `databasename=#`, ex: `test=#`
+    - The command line should now start with `databasename=#`, ex: `test=#`.
 - Create postgis extension:
 ```
 CREATE EXTENSION postgis;
 ```
-    - You should see the output message `CREATE EXTENSION`
+    - You should see the output message `CREATE EXTENSION`.
 - You can quit the database now:
 ```
 \q
 ```
 
 ## Configure Authentication
-- Authentication is required to run schema building scripts remotely. You need to know your hostname (in this case use the DB instance endpoint, the IP address of the EC2 instance), port, database name, username and password
+- Authentication is required to run schema building scripts remotely. You need to know your hostname (in this case use the DB instance endpoint, the IP address of the EC2 instance), port, database name, username and password.
 ```
 echo host:port:database:user:password > .pgpass
 chmod 600 .pgpass
 ```
-ex:
+- For example:
 ```
 echo 13.254.91.45:5432:test:derek:derekpassword > .pgpass
 chmod 600 .pgpass
 ```
 
 ## Open Ports on AWS
-- This will be a similar process to when you opened ports for [Webmin](Webmin_Setup.html)
-- Under the EC2 instance on AWS, click on the ‘Security’ tab, and note the name of the Security group
+- This will be a similar process to when you opened ports for [Webmin](Webmin_Setup.html).
+- Under the EC2 instance on AWS, click on the ‘Security’ tab, and note the name of the Security group.
 
     ![PostgresStepTwo](serverAssets/PostgresStepTwo.png)
-- Navigate on the side panel to 'Network & Security' > 'Security Groups'
-- Click the check box for the security group that is the same as the one for your EC2 instance
+- Navigate on the side panel to 'Network & Security' > 'Security Groups'.
+- Click the check box for the security group that is the same as the one for your EC2 instance.
 ![PostgresStepThree](serverAssets/PostgresStepThree.png)
-- Click on 'Actions' > 'Edit inbound rules'
+- Click on 'Actions' > 'Edit inbound rules'.
 ![PostgresStepFour](serverAssets/PostgresStepFour.png)
-- Click 'Add Rule' with 'Type' Postgresql, 'Port range' 5432, 'Source' Anywhere IPV6 ::/0, then hit 'Save rules'
+- Click 'Add Rule' with 'Type' Postgresql, 'Port range' 5432, 'Source' Anywhere IPV6 ::/0, then hit 'Save rules'.
 ![PostgresStepFive](serverAssets/PostgresStepFive.png)
 
 Next you must set up and connect to PGAdmin in order to run the schema building scripts.

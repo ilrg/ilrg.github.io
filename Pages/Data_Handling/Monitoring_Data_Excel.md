@@ -9,9 +9,9 @@ nav_order: 3
 _Monitoring data and checking for errors is also done in excel through fzs_monitoring_tool.xlsx. Ask the database administrator for the ILRG project's populated excel tool, but this guide will also go over how to create one from scratch._
 
 ## Purpose
-- Loads in data from the update and public schema
-- Used to spot errors and monitor which parcels need certification 
-- General interface to monitor the status of the data and the progress of validating claims, parties and the OCC (Objection, Correction and Certification) process
+- Loads in data from the update and public schema.
+- Used to spot errors and monitor which parcels need certification. 
+- General interface to monitor the status of the data and the progress of validating claims, parties and the OCC (Objection, Correction and Certification) process.
 
 ## Structure
 We will set up the following data sheets in excel:
@@ -33,7 +33,7 @@ We will set up the following data sheets in excel:
 
 ## Add Data from Database to Excel Sheet
 **- Data is connected to the SQL database through ODBC drivers**
-- First you need to install ODBC on your computer (follow the [instructions](https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16) relevant to your device)
+- First you need to install ODBC on your computer (follow the [instructions](https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16) relevant to your device).
 - On mac, run the following command in your terminal: 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -41,12 +41,12 @@ brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-rel
 brew update
 HOMEBREW_ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
 ```
-- for each set of data (each sheet), you need to:
-    - open a new sheet
+- For each set of data (each sheet), you need to:
+    - Open a new sheet
     - Go to Data > Get Data (Power Query) > From SQL Server ODBC
 ![MonitoringExcelOne](Data_Assets/MonitoringExcelOne.png)
 
-    - in the 'From ODBC' pop up, set the following:
+    - In the 'From ODBC' pop up, set the following:
         - Data source name (DSN): ilrg_fzs
         - Connection string (replace username and password with your credentials for the PostgreSQL database): 
         ```
@@ -252,7 +252,7 @@ _- Note the difference in SQL commands between validated/unvalidated and ready t
 
 ## Configure Data
 ### Properties of Data Connection
-- You can find the properties of each sheet's database connection by going to 'Data' and then 'Properties'
+- You can find the properties of each sheet's database connection by going to 'Data' and then 'Properties'.
 
 ![MonitoringExcelTwo](Data_Assets/MonitoringExcelTwo.png)
 - Set external data properties to the following: 
@@ -260,13 +260,13 @@ _- Note the difference in SQL commands between validated/unvalidated and ready t
 ![MonitoringExcelThree](Data_Assets/MonitoringExcelThree.png)
 
 ### Add Village Data for Joins
-- The Master Sheet and Error Spotter sheet pull data from sheets by matching village names. But first, we need to add the village data to sheets by matching parcel ids to pull data from the demarcations sheet
-    - For validated_claims, unvalidated_claims, validated_parcels, unvalidated_parcels, OCC Parcel Ready to Certify, OCC Parcel Not Ready to Certify
+- The Master Sheet and Error Spotter sheet pull data from sheets by matching village names. But first, we need to add the village data to sheets by matching parcel ids to pull data from the demarcations sheet.
+    - For validated_claims, unvalidated_claims, validated_parcels, unvalidated_parcels, OCC Parcel Ready to Certify, OCC Parcel Not Ready to Certify:
     ```
     =INDEX(demarcations!H:H,MATCH([@[parcel_id]],demarcations!P:P,0))
     ```
-- There are some sheets that don’t get data from sql queries: unvalidated parcels, unvalidated claims, error spotter, enumerators, master sheet
-    - These sheets often pull field values from the sheets that do get data from sql queries, so **it is all connected**
+- There are some sheets that don’t get data from sql queries: unvalidated parcels, unvalidated claims, error spotter, enumerators, master sheet.
+    - These sheets often pull field values from the sheets that do get data from sql queries, so **it is all connected**.
 
 ### Master Sheet
 **- This sheet contains a row for each village. You can track the progress of the land documentation progress, see which villages need parcels and claims to be validated. You can track the OCC progress as well and where records need to be changed and checked before final approval.**
@@ -319,7 +319,7 @@ _- Note the difference in SQL commands between validated/unvalidated and ready t
 
 ![MonitoringExcelSix](Data_Assets/MonitoringExcelSix.png)
 - Has a row for each parcel/demarcation, with the ability to filter by village and chiefdom to find records with missing information, and filter further by HH sheet or receipt to identify the parcel that needs to be validated/changed/etc. 
-- This sheet is compiled by matching data from the other sheets (which pull data from the update and public schema on the server) and matching it to the receipt number (additional details on the source of each column is below)
+- This sheet is compiled by matching data from the other sheets (which pull data from the update and public schema on the server) and matching it to the receipt number (additional details on the source of each column is below).
 - **Columns and their source**: 
     - **Demarcation Enumerator**: 
         ```
@@ -356,7 +356,7 @@ _- Note the difference in SQL commands between validated/unvalidated and ready t
         ```
         =COUNTIF(demarcations!P:P,error_spotter!H2)
         ```
-        - Counts whether the receipt/parcel id number appears in the demarcations sheet
+        - Counts whether the receipt/parcel id number appears in the demarcations sheet.
         - 0 if the receipt number does not have a demarcation, 1 if the receipt number does have a demarcation 
     - **Validated Claims**: checks if the parcel has a validated claim
         ```
@@ -452,41 +452,41 @@ _- Note the difference in SQL commands between validated/unvalidated and ready t
 
 
 ## Example Uses
-- Check the status of each village in the Master Sheet to see if claims or parcel validation isn't completed, and whether it is ready to certify 
+- Check the status of each village in the Master Sheet to see if claims or parcel validation isn't completed, and whether it is ready to certify.
 
 ![MonitoringExcelSeven](Data_Assets/MonitoringExcelSeven.png)
 
 ### Example 1
 - In the image above, look at the row for the village ‘Mahara’. 94.4% of claims are complete, and 91.67% of parcels are complete. There are no unvalidated claims, which is okay, as sometimes not all demarcations will have a claim associated with them. But all parcels must be validated, and there are three remaining unvalidated parcels. For OCC, 36.11% of parcels are ready to certify. And there are 23 parcels that are pending changes. 
-- First let's look at the error_spotter for the village ‘Mahara’ 
-    - Go to error_spotter and then click the filter icon on the village column
+- First let's look at the error_spotter for the village ‘Mahara’:
+    - Go to error_spotter and then click the filter icon on the village column.
 
     ![MonitoringExcelEight](Data_Assets/MonitoringExcelEight.png)
-    - Then filter by ‘Equals’ and then type Mahara
+    - Then filter by ‘Equals’ and then type Mahara.
 
     ![MonitoringExcelNine](Data_Assets/MonitoringExcelNine.png)
-    - Now look at the column ‘Unvalidated Parcels’ and filter by descending, so that the rows with a value of 1 (meaning they are unvalidated) are at the top
+    - Now look at the column ‘Unvalidated Parcels’ and filter by descending, so that the rows with a value of 1 (meaning they are unvalidated) are at the top.
 
     ![MonitoringExcelTen](Data_Assets/MonitoringExcelTen.png)
-    - So far everything looks okay as the parcels don’t have a 1 for both validated and unvalidated values
-    - Now go to the unvalidated_parcels sheet so we can get some more information
-        - Filter by village again where village equals ‘Mahara’ (same as we did in the error_spotter sheet)
+    - So far everything looks okay as the parcels don’t have a 1 for both validated and unvalidated values.
+    - Now go to the unvalidated_parcels sheet so we can get some more information.
+        - Filter by village again where village equals ‘Mahara’ (same as we did in the error_spotter sheet).
     
     ![MonitoringExcelEleven](Data_Assets/MonitoringExcelEleven.png)
     - We can see that all of the parcels have geometry, so they don’t need to be digitized. But the checked column is set to ‘no’. Thus these parcels need to be checked in the monitoring_tool qgis project. 
 - Now let's look at the OCC status of records for ‘Mahara’. As the master sheet told us, 36.11% of parcels are ready to certify. And there are 23 parcels that are pending changes.
-- First we need to filter the error spotter to display the records with an ‘OCC Return Status’, which means that these parcels are in the OCC phase. Filter and select all the values except N/A
+- First we need to filter the error spotter to display the records with an ‘OCC Return Status’, which means that these parcels are in the OCC phase. Filter and select all the values except N/A.
 
 ![MonitoringExcelTwelve](Data_Assets/MonitoringExcelTwelve.png)
 - Now we can see where some errors have occurred, that have led to some duplicate parcels/parcel IDs in the ‘OCC Parcel Not Ready to Certify’ sheet. We see this because the column ‘OCC Return, Parcel Not Ready to Certify’, for the first three rows, has a value of 2, when it should only have a value of 1 or 0. The ‘2’ means that the parcel ID has been counted twice. 
 
 ![MonitoringExcelThirteen](Data_Assets/MonitoringExcelThirteen.png)
-- Now we can go to the sheet ‘OCC Parcel Not Ready to Certify’ to try and look deeper into the error
+- Now we can go to the sheet ‘OCC Parcel Not Ready to Certify’ to try and look deeper into the error.
 
 ![MonitoringExcelFourteen](Data_Assets/MonitoringExcelFourteen.png)
 - It looks like some are exact duplicates, while others have different values for whether they need corrections. To remedy the error, one should look at the original HH sheets  and ODK submissions to see if they differ in any way. 
-- Go back to the error_spotter, and look at the other records where the ‘OCC Return, Parcel No Ready to Certify’ is 1. You can then look at the other OCC Columns to see where corrections are needed, such as the deletion of parties, addition of parties 
-- For example some of the records need the headperson and the VLC to sign. Others require corrections that are not specified, and the relevant OCC Register will need to be checked for the required changes 
+- Go back to the error_spotter, and look at the other records where the ‘OCC Return, Parcel No Ready to Certify’ is 1. You can then look at the other OCC Columns to see where corrections are needed, such as the deletion of parties, addition of parties.
+- For example some of the records need the headperson and the VLC to sign. Others require corrections that are not specified, and the relevant OCC Register will need to be checked for the required changes.
 
 ![MonitoringExcelFifteen](Data_Assets/MonitoringExcelFifteen.png)
 - Another issue is when ‘OCC Return, Parcel Ready to Certify’ and ‘OCC Return, Parcel Not Ready to Certify’ are both 1. This means that the record has been moved to the public schema without the record then being removed from the update schema. Rerunning the OCC SQL scripts should fix this problem, and then refresh the data connection in the excel sheet.
@@ -496,8 +496,8 @@ _- Note the difference in SQL commands between validated/unvalidated and ready t
 ### Example 2
 
 ![MonitoringExcelSeven](Data_Assets/MonitoringExcelSeven.png)
-- In this example we will look at OCC for Manjabila, where there are two parcels that are pending changes
-- First go to error spotter and filter the village columns like we did in Example 1, but we want village to be ‘Manjabila’ this time. Then filter the ‘OCC Return Parcel Not Ready to Certify’ to descending. The first two rows are now the parcel information that needs to go through OCC
+- In this example we will look at OCC for Manjabila, where there are two parcels that are pending changes.
+- First go to error spotter and filter the village columns like we did in Example 1, but we want village to be ‘Manjabila’ this time. Then filter the ‘OCC Return Parcel Not Ready to Certify’ to descending. The first two rows are now the parcel information that needs to go through OCC.
 
 ![MonitoringExcelSeventeen](Data_Assets/MonitoringExcelSeventeen.png)
 - There are not any specific changes noted, so the OCC register will need to be checked and the required changes made. Also consult the OCC tool in Access.
