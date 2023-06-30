@@ -35,5 +35,5 @@ search:
 
 # Footer content
 # appears at the bottom of every page's main content
-footer_content: ![USAIDLogo](Logo.png) "This site serves as the technical documentation for the set up and use of ILRG's customary land documentation technology, an adaptation of the USAID MAST project.
+footer_content: ![USAIDLogo](Logo.png) "This site serves as the technical documentation for the set up and use of ILRG's customary land documentation technology, an adaptation of the USAID MAST project."
 #Footer not working - deprecated. TODO: Fix
